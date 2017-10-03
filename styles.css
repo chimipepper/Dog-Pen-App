@@ -1,0 +1,14 @@
+#input {
+    border-style:solid;
+    background-color:yellow;
+}
+#pen {
+    border-style:solid;
+    background-color:pink;
+}
+img {
+    height:100px;
+}
+li {
+    list-style:none;
+}

@@ -1,0 +1,36 @@
+<html ng-app="dogPen">
+
+<head>
+    <title>Dog Pen App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <script src="app/angular.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container" ng-controller="listController">
+        <div class="row">
+            <div id="input" class="col-sm-6">{{1+1}}
+                <img class="img-responsive" src={{dogPic.message}}>
+                <br>
+                <p>Give your dog a name!</p><input type="text" ng-model="dogName">
+                <br>
+                <button type="button" ng-click="addToPen(dogName)">Add to Pen</button>
+                <button type="button" ng-click="dogSearch()">Next Dog</button>
+            </div>
+
+            <div id="pen" class="col-sm-6">{{1+1}}
+                <ul>
+                    <li ng-repeat="dog in myDogs">
+                        {{dog.name}}--<img src="{{dog.picture}}">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
